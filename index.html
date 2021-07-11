@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Otomanopee One"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/14293db0d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Chrisopher B. Miller</title>
+  </head>
+  <body>
+    <main>
+      <section class="glass">
+        <div class="dashboard">
+          <div class="profile">
+            <img
+              src="/photos/myface.jpg"
+              alt="my face"
+              width="50"
+              height="73"
+            />
+            <h3>Christopher B. Miller</h3>
+            <p>Full Stack Web Dev</p>
+          </div>
+
+          <div class="links">
+            <button
+              tabindex="1"
+              class="link active"
+              onclick="openPanel(event, 'about', 'aboutContent')"
+            >
+              <i class="material-icons">subject</i>
+              <p>ABOUT</p>
+            </button>
+
+            <button
+              tabindex="2"
+              class="link"
+              onclick="openPanel(event, 'work', 'workContent')"
+            >
+              <i class="material-icons">code</i>
+              <p>WORK</p>
+            </button>
+
+            <button
+              tabindex="3"
+              class="link"
+              onclick="openPanel(event, 'contact', 'contactContent')"
+            >
+              <i class="material-icons">perm_identity</i>
+              <p>CONTACT</p>
+            </button>
+          </div>
+
+          <div class="social">
+            <p>social:</p>
+            <a
+              href="https://github.com/cMillerScott"
+              target="_blank"
+              tabindex="4"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/christopher-miller-2a1ab9188/"
+              target="_blank"
+              tabindex="5"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="panel-sleeve">
+          <div class="panel current" id="about">
+            <div class="panel-content current" id="aboutContent">
+              <h2>ABOUT</h2>
+              <p>Stuff about me</p>
+            </div>
+          </div>
+
+          <div class="panel" id="work">
+            <div class="panel-content" id="workContent">
+              <h2>WORK</h2>
+              <p>Some of my work</p>
+            </div>
+          </div>
+
+          <div class="panel" id="contact">
+            <div class="panel-content" id="contactContent">
+              <h2>CONTACT</h2>
+
+              <div class="contact">
+                <i
+                  class="
+                    fa fa-envelope fa-fw
+                    w3-hover-text-black w3-xlarge w3-margin-right
+                  "
+                ></i>
+                Email: c.millerscott@gmail.com<br />
+                <i
+                  class="
+                    fa fa-phone fa-fw
+                    w3-hover-text-black w3-xlarge w3-margin-right
+                  "
+                ></i>
+                Cell: (870)405-8522<br />
+                <i
+                  class="
+                    fa fa-map-marker fa-fw
+                    w3-hover-text-black w3-xlarge w3-margin-right
+                  "
+                ></i>
+                Bentonville, AR<br />
+              </div>
+
+              <div class="form">
+                <form
+                  action="mailto:c.millerscott@gmail.com"
+                  method="post"
+                  enctype="text/plain"
+                  target="_blank"
+                >
+                  <p>Drop me a line!</p>
+
+                  <div class="top-line">
+                    <div class="input-label">
+                      <label id="name">Name:</label>
+                      <input
+                        onfocus="showLabel('name')"
+                        onblur="hideLabel('name')"
+                        class="name"
+                        type="text"
+                        maxlength="20"
+                        placeholder="Name"
+                        required
+                        name="Name"
+                      />
+                    </div>
+
+                    <div class="input-label">
+                      <label id="email">Email:</label>
+                      <input
+                        onfocus="showLabel('email')"
+                        onblur="hideLabel('email')"
+                        class="email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                        name="Email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="input-label">
+                    <label id="message">Message:</label>
+                    <textarea
+                      onfocus="showLabel('message')"
+                      onblur="hideLabel('message')"
+                      class="message"
+                      type="text"
+                      maxlength="100"
+                      placeholder="Message (100 character max)"
+                      required
+                      name="Message"
+                    ></textarea>
+                  </div>
+
+                  <button class="submit" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
