@@ -243,7 +243,15 @@ a:visited {
   box-shadow: 0 1px 2px 0 #490206;
 }
 
-/* contact */
+/* about me */
+
+.about {
+  display: block;
+  padding: 2%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+/* contact me */
 .contact {
   padding: 2%;
   font-size: 1.2rem;
