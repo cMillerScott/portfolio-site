@@ -6,9 +6,11 @@
   letter-spacing: 0.2rem;
 }
 
-main {
-  min-height: 100vh;
+body {
   background: linear-gradient(to right top, #490206, #0e9ca5);
+}
+
+main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,9 +77,9 @@ a:visited {
   flex-direction: row;
   align-items: center;
   margin-top: 4rem;
-  margin-bottom: 4rem;
   color: #e0f0f2;
   text-shadow: 1.5px 1.5px 1px#490206;
+  height: fit-content;
   width: 75%;
   background: linear-gradient(to right, #0e9aa4, rgba(14, 156, 165, 0.6));
   border-radius: 2rem;
@@ -94,8 +96,7 @@ a:visited {
   background-color: #0e9aa4;
   border-radius: 2rem;
   z-index: 3;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* profile container */
@@ -164,7 +165,8 @@ a:visited {
   transition: all ease-in-out 300ms;
 }
 
-.link:hover p::after, .link:focus p::after,
+.link:hover p::after,
+.link:focus p::after,
 .active p::after {
   width: 100%;
 }
@@ -174,7 +176,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   margin-right: 2rem;
-  padding-bottom: .25rem;
+  padding-bottom: 0.25rem;
 }
 
 .social p {
@@ -186,7 +188,8 @@ a:visited {
   margin-left: 1rem;
 }
 
-.social a:hover, .social a:focus {
+.social a:hover,
+.social a:focus {
   color: #a1aeaf;
   outline: none;
 }
@@ -209,6 +212,7 @@ a:visited {
   color: #f1f1f1;
   background-color: rgba(14, 154, 164, 0.5);
   text-shadow: 1.5px 1.5px 1px #490206;
+  height: 0%;
   width: 0%;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -220,6 +224,7 @@ a:visited {
   display: none;
   flex-direction: column;
   align-items: center;
+  transition: all ease-in-out 300ms;
 }
 
 .panel-content h2 {
@@ -244,15 +249,68 @@ a:visited {
 }
 
 /* about me */
-
-.about {
-  display: block;
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 2%;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
+  height: 20rem;
+  overflow: hidden;
 }
+
+/* dev skills */
+.languages {
+  padding: 2%;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.languages ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.languages li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: .75rem;
+  padding: 2%;
+}
+
+.languages i {
+  font-size: 3rem;
+}
+
+.others {
+  align-self: flex-start;
+  padding: 2%;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.others ul {
+  list-style: none;
+}
+
+.others li {
+  /* display: flex; */
+  margin-left: 2rem;
+}
+
+.others i {
+  /* align-self: flex-end; */
+  padding: 2%;
+  font-size: .75rem;
+}
+
 /* contact me */
 .contact {
+  display: block;
   padding: 2%;
   font-size: 1.2rem;
 }
@@ -283,7 +341,8 @@ label {
   transform: translateX(1rem) translateY(2rem);
 }
 
-input, textarea {
+input,
+textarea {
   align-self: flex-start;
   font-size: 1rem;
   width: 90%;
@@ -296,11 +355,13 @@ input, textarea {
   outline: none;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   box-shadow: 0 2px 4px 0 #490206;
 }
 
-input:focus::placeholder, textarea:focus::placeholder {
+input:focus::placeholder,
+textarea:focus::placeholder {
   opacity: 0;
 }
 
@@ -311,25 +372,34 @@ input:focus::placeholder, textarea:focus::placeholder {
 .form button {
   display: flex;
   align-self: center;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #e0f0f2;
   border: none;
   outline: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1rem 2rem;
   background-color: #490206;
 }
 
-.form button:hover, .form button:focus {
+.form button:hover,
+.form button:focus {
   transform: scale(1.02);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .form button i {
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   transition: all ease-in-out 300ms;
 }
 
-.form button:hover i, .form button:focus i{
-  transform: scale(.5) translateX(1rem);
+.form button:active i {
+  transform: scale(0.5) translateX(1rem);
+}
+
+footer {
+  color: transparent;
+  text-shadow: .5px .5px 0px #0e9aa4;
+  text-align: center;
+  padding: 2%;
 }
