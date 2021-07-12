@@ -269,7 +269,6 @@ a:visited {
 
 .languages ul {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   list-style: none;
 }
@@ -298,14 +297,89 @@ a:visited {
 }
 
 .others li {
-  /* display: flex; */
   margin-left: 2rem;
 }
 
 .others i {
-  /* align-self: flex-end; */
   padding: 2%;
   font-size: .75rem;
+}
+
+/* my work */
+.work-slide {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: rgba(224, 240, 242, 0.5);
+  padding: 2%;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.current-slide {
+  display: flex;
+}
+
+.work-slide h3 {
+  color: transparent;
+  text-shadow: 1.5px 1.5px 0px #490206;
+}
+
+.work-slide img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 10rem;
+  width: 80%;
+  border-radius: 2rem;
+}
+
+.work-slide-text {
+  display: flex;
+  height: 7rem;
+  width: 75%;
+  overflow: hidden;
+  color: transparent;
+  font-size: .75rem;
+  line-height: .75rem;
+  text-shadow: 1.5px 1.5px 0px #490206;
+}
+
+.work-slide button {
+  display: flex;
+  align-self: center;
+  font-size: 0.75rem;
+  color: #e0f0f2;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  background-color: #490206;
+}
+
+.work-slide button:hover,
+.work-slide button:focus {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dot {
+  display: inline-block;
+  cursor: pointer;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-bottom: 1rem;
+  background-color: rgba(73, 2, 6, .75);
+  border-radius: 50%;
+  transition: all ease-in-out 300ms;
+}
+
+.active-dot, .dot:hover {
+  background-color: #490206;
 }
 
 /* contact me */

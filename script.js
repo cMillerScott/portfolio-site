@@ -1,19 +1,3 @@
-function showLabel(labelId) {
-  const label = document.getElementById(labelId);
-  
-  label.style.visibility = "visible";
-  label.style.opacity = "1";
-  label.style.transform = "translateX(0rem) translateY(0rem)";
-}
-
-function hideLabel(labelId) {
-  const label = document.getElementById(labelId);
-  
-  label.style.visibility = "hidden";
-  label.style.opacity = "0";
-  label.style.transform = "translateX(1rem) translateY(2rem)";
-}
-
 // cycle through panels and set links
 function openPanel(evt, panelName, panelContent) {
   const currentPanel = document.getElementById(panelName);
@@ -42,4 +26,42 @@ function openPanel(evt, panelName, panelContent) {
   currentPanelContent.style.display = "flex";
   currentPanelContent.className += " current";
   evt.currentTarget.className += " active";
+}
+
+// work slideshow
+function cycleWorkSlides(evt, slideName) {
+  const currentSlide = document.getElementById(slideName);
+  console.log(currentSlide);
+  
+  const slides = document.getElementsByClassName("work-slide")
+  for (let slide of slides) {
+    slide.style.display = "none";
+    slide.className = slide.className.replace(" current-slide", "");
+  }
+  
+  const dots = document.getElementsByClassName("dot");
+  for (let dot of dots) {
+    dot.className = dot.className.replace(" active-dot", "");
+  }
+  
+  currentSlide.style.display = "flex";
+  currentSlide.className += " current-slide"
+  evt.currentTarget.className += " active-dot";
+} 
+
+// form labels
+function showLabel(labelId) {
+  const label = document.getElementById(labelId);
+  
+  label.style.visibility = "visible";
+  label.style.opacity = "1";
+  label.style.transform = "translateX(0rem) translateY(0rem)";
+}
+
+function hideLabel(labelId) {
+  const label = document.getElementById(labelId);
+  
+  label.style.visibility = "hidden";
+  label.style.opacity = "0";
+  label.style.transform = "translateX(1rem) translateY(2rem)";
 }

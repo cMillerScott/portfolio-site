@@ -148,7 +148,43 @@
           <div class="panel" id="work">
             <div class="panel-content" id="workContent">
               <h2>MY WORK</h2>
-              <p>Some of my work</p>
+
+              <div class="work-slide current-slide" id="calculator">
+                <h3>JS Hiking Calculator</h3>
+                <img src="/photos/Hiking Calculator Img.png" alt="Hiking mileage calculator" width="500" height="239">
+                
+                <div class="work-slide-text"> 
+                  <p>"RopeBurn's Super Cool Hiking Calculator" was inspired by a hiking meme. 
+                    This application helps the user calculate the variables that determine 
+                    how many days it takes to cover a certain number of  miles. I am passionate 
+                    about hiking so using this was a perfect fit as my first JavaScript project.</p> 
+               </div>
+
+                <a href="https://cmillerscott.github.io/Hiking_Calculator/" target="_blank">
+                  <button>VISIT SITE</button>
+                </a>
+              </div>
+
+              <div class="work-slide" id="arcc-site">
+                <h3>ARCC Demo Site</h3>
+                <img src="/photos/Hiking Calculator Img.png" alt="ARCC website" width="500" height="239">
+                
+                <div class="work-slide-text"> 
+                  <p>The Arkansas Climber's Coalition was in need of an updated website. 
+                    I built a demo site for to show them what I could do.</p> 
+               </div>
+
+                <a href="https://cmillerscott.github.io/ARCC_site/" target="_blank">
+                  <button>VISIT SITE</button>
+                </a>
+              </div>
+
+              <div class="dots">
+                <span class="dot active-dot" onclick="cycleWorkSlides(event, 'calculator')"></span>
+                <span class="dot" onclick="cycleWorkSlides(event, 'arcc-site')"></span>
+                <!-- <span class="dot" onclick="currentWorkSlide(3)"></span> -->
+              </div>
+              
             </div>
           </div>
 
@@ -224,6 +260,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </main>
