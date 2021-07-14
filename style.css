@@ -84,7 +84,8 @@ a:visited {
   border-radius: 2rem;
   z-index: 1;
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 8px 0 rgba(129, 127, 127, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(129, 127, 127, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* left content container */
@@ -310,6 +311,7 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
   width: 80%;
   background-color: rgba(224, 240, 242, 0.5);
   padding: 2%;
@@ -481,19 +483,19 @@ footer {
 
 /* mobile verticle */
 @media screen and (max-width: 480px) {
-  /* main container */
+  /* main container(verticle) */
   .glass {
     flex-direction: column;
     margin-top: 1rem;
     margin-bottom: 4rem;
   }
 
-  /* left content container */
+  /* left content container(verticle) */
   .dashboard {
     width: 100%;
   }
 
-  /* links container */
+  /* links container(verticle) */
   .links {
     display: flex;
     flex-direction: row;
@@ -504,10 +506,10 @@ footer {
     right: -5;
     bottom: 0;
     border-radius: 2rem;
-    box-shadow: 0 8px 16px 0 rgba(129, 127, 127, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+    box-shadow: 0 8px 16px 0 rgba(129, 127, 127, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  
+
   .link {
     flex-direction: column;
     justify-content: center;
@@ -522,12 +524,12 @@ footer {
     margin-right: 0;
   }
 
-  /* social links container */
+  /* social links container(verticle) */
   .social {
     justify-content: center;
   }
 
-  /* panel container */
+  /* panel container(verticle) */
   .panel-sleeve {
     display: flex;
     flex-direction: column;
@@ -539,7 +541,7 @@ footer {
     border-bottom-right-radius: 2rem;
   }
 
-  /* each individual panel hidden */
+  /* each individual panel hidden(verticle) */
   .panel {
     height: 0%;
     margin-top: -4rem;
@@ -553,14 +555,14 @@ footer {
     height: auto;
   }
 
-  /* about me */
+  /* about me(verticle) */
   .about-me {
     justify-content: space-evenly;
     font-size: 1rem;
     height: 30rem;
   }
 
-  /* dev skills */
+  /* dev skills(verticle) */
   .languages {
     height: auto;
     font-size: 1rem;
@@ -582,5 +584,22 @@ footer {
 
   .others ul {
     margin-top: 1rem;
+  }
+
+  /* my work(verticle) */
+  .work-slide h3 {
+    text-align: center;
+  }
+
+  .work-slide img {
+    border-radius: 1rem;
+  }
+
+  .work-slide-text {
+    height: auto;
+    padding: 2%;
+    font-size: .7rem;
+    line-height: .7rem;
+    margin-bottom: 1rem;
   }
 }
