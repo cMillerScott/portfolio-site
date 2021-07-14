@@ -80,7 +80,7 @@ a:visited {
   color: #e0f0f2;
   text-shadow: 1.5px 1.5px 1px#490206;
   width: 75%;
-  background: linear-gradient(to right, #0e9aa4, rgba(14, 156, 165, 0.6));
+  background: linear-gradient(to right, #0e9aa4, rgba(14, 156, 165, 0.75));
   border-radius: 2rem;
   z-index: 1;
   backdrop-filter: blur(5px);
@@ -477,17 +477,18 @@ footer {
   color: transparent;
   text-shadow: 0.5px 0.5px 0px #0e9aa4;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   padding: 2%;
 }
 
 /* mobile verticle */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   /* main container(verticle) */
   .glass {
     flex-direction: column;
     margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    background: none;
   }
 
   /* left content container(verticle) */
@@ -502,12 +503,13 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     width: 75%;
+    margin-bottom: 1rem;
     position: fixed;
     right: -5;
     bottom: 0;
     border-radius: 2rem;
-    box-shadow: 0 8px 16px 0 rgba(129, 127, 127, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 8px 16px 0 rgba(129, 127, 127, 0.2), */
+      /* 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   }
 
   .link {
@@ -531,8 +533,7 @@ footer {
 
   /* panel container(verticle) */
   .panel-sleeve {
-    display: flex;
-    flex-direction: column;
+    display: contents;
     width: 100%;
     margin-top: -2rem;
     padding-top: 4rem;
@@ -549,6 +550,8 @@ footer {
     border-radius: 0rem;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    background-color: rgba(14, 154, 164, 0.75);
+
   }
 
   .current {
@@ -601,5 +604,9 @@ footer {
     font-size: .7rem;
     line-height: .7rem;
     margin-bottom: 1rem;
+  }
+
+  footer {
+    text-shadow: none;
   }
 }
