@@ -321,7 +321,19 @@ a:visited {
 
 .current-slide {
   display: flex;
+  animation: fade ease-in-out 1000ms;
 }
+
+@-webkit-keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
 
 .work-slide h3 {
   color: transparent;
