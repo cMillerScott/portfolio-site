@@ -49,25 +49,25 @@ a:visited {
 
 @keyframes float1 {
   0% {
-    transform: translatey(-1vh);
+    transform: translateY(-1vh);
   }
   50% {
-    transform: translatey(55vh);
+    transform: translateY(75vh);
   }
   100% {
-    transform: translatey(-1vh);
+    transform: translateY(-1vh);
   }
 }
 
 @keyframes float2 {
   0% {
-    transform: translatey(55vh);
+    transform: translatey(75vh);
   }
   50% {
     transform: translatey(-1vh);
   }
   100% {
-    transform: translatey(55vh);
+    transform: translatey(75vh);
   }
 }
 
@@ -262,15 +262,13 @@ a:visited {
 
 /* dev skills */
 .languages {
-  align-self: flex-start;
-  padding: 2%;
-  height: 10rem;
+  height: auto;
   overflow: hidden;
 }
 
 .languages ul {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-evenly;
   list-style: none;
 }
 
@@ -289,7 +287,7 @@ a:visited {
 .others {
   align-self: flex-start;
   padding: 2%;
-  height: 15rem;
+  height: auto;
   overflow: hidden;
 }
 
@@ -427,6 +425,7 @@ form {
 .input-label {
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 2%;
 }
 
@@ -504,6 +503,31 @@ footer {
 
 /* mobile verticle */
 @media screen and (max-width: 600px) {
+/* circles(verticle) */
+  @keyframes float1 {
+    0% {
+      transform: translateY(-1vh);
+    }
+    50% {
+      transform: translateY(125vh);
+    }
+    100% {
+      transform: translateY(-1vh);
+    }
+  }
+  
+  @keyframes float2 {
+    0% {
+      transform: translatey(125vh);
+    }
+    50% {
+      transform: translatey(-1vh);
+    }
+    100% {
+      transform: translatey(125vh);
+    }
+  }
+
   /* main container(verticle) */
   .glass {
     flex-direction: column;
@@ -531,7 +555,7 @@ footer {
     width: 75%;
     margin-bottom: 2rem;
     position: fixed;
-    padding: 1%;
+    padding: 2%;
     right: -5;
     bottom: 0;
     border-radius: 2rem;
@@ -593,6 +617,7 @@ footer {
 
   /* dev skills(verticle) */
   .languages {
+    text-align: center;
     height: auto;
     font-size: 1rem;
   }
@@ -611,8 +636,13 @@ footer {
     font-size: 2rem;
   }
 
+  .others {
+    text-align: center;
+  }
+
   .others ul {
     margin-top: 1rem;
+    text-align: left;
   }
 
   /* my work(verticle) */
@@ -632,7 +662,7 @@ footer {
     margin-bottom: 1rem;
   }
 
-  /* contact me */
+  /* contact me(verticle) */
   .contact {
     font-size: .9rem;
   }
