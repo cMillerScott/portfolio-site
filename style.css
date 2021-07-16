@@ -262,6 +262,7 @@ a:visited {
 
 /* dev skills */
 .languages {
+  align-self: flex-start;
   padding: 2%;
   height: 10rem;
   overflow: hidden;
@@ -269,7 +270,7 @@ a:visited {
 
 .languages ul {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   list-style: none;
 }
 
@@ -368,7 +369,7 @@ a:visited {
 }
 
 .dots {
-  display: inline-block;
+  display: block;
 }
 
 .dot {
@@ -393,6 +394,22 @@ a:visited {
   display: block;
   padding: 2%;
   font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.contact-head {
+  display: flex;
+  align-items: center;
+}
+
+.contact h5 {
+  margin-left: 1rem;
+}
+
+.contact p {
+  margin-left: 2.5rem;
+  text-shadow: 1px 1px 0px #e0f0f2;
+  color: #490206;
 }
 
 .form {
@@ -405,7 +422,6 @@ a:visited {
 form {
   display: flex;
   flex-direction: column;
-  padding: 2%;
 }
 
 .input-label {
@@ -425,8 +441,9 @@ input,
 textarea {
   align-self: flex-start;
   font-size: 1rem;
-  width: 90%;
-  margin: 2%;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: #490206;
@@ -491,13 +508,18 @@ footer {
   .glass {
     flex-direction: column;
     margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     background: none;
   }
 
   /* left content container(verticle) */
   .dashboard {
     width: 100%;
+  }
+
+  /* profile container(verticle) */
+  .profile h3 {
+    font-size: 1rem;
   }
 
   /* links container(verticle) */
@@ -507,13 +529,14 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     width: 75%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     position: fixed;
+    padding: 1%;
     right: -5;
     bottom: 0;
     border-radius: 2rem;
-    /* box-shadow: 0 8px 16px 0 rgba(129, 127, 127, 0.2), */
-      /* 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 0 8px 16px 0 rgba(129, 127, 127, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .link {
@@ -555,7 +578,6 @@ footer {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background-color: rgba(14, 154, 164, 0.75);
-
   }
 
   .current {
@@ -605,9 +627,41 @@ footer {
   .work-slide-text {
     height: auto;
     padding: 2%;
-    font-size: .7rem;
-    line-height: .7rem;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
     margin-bottom: 1rem;
+  }
+
+  /* contact me */
+  .contact {
+    font-size: .9rem;
+  }
+
+  .contact-head {
+    margin-left: 1rem;
+  }
+
+  .contact h5 {
+    margin-left: .5rem;
+  }
+
+  .contact p {
+    margin-left: 1.25rem;
+  }
+
+  .top-line {
+    flex-direction: column;
+  }
+
+  .form button {
+    font-size: .75rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .form button i {
+    padding-left: .1rem;
+    padding-right: .1rem;
   }
 
   footer {
