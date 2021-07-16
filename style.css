@@ -368,6 +368,8 @@ a:visited {
 
 .dots {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dot {
@@ -376,7 +378,8 @@ a:visited {
   height: 1.2rem;
   width: 1.2rem;
   overflow: hidden;
-  margin-left: .75rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
   margin-bottom: 1rem;
   background-color: rgba(73, 2, 6, 0.75);
   border-radius: 50%;
