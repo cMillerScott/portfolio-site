@@ -1,12 +1,16 @@
 const nodemailer = require('nodemailer');
 const express = require('express');
+const dotenv = require('dotenv');
 const app = express();
+
+
 
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.static('public'));
-app.use(express.json())
+app.use(express.json());
+dotenv.config();
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
@@ -18,17 +22,17 @@ app.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'c.millerscott@gmail.com',
-            pass: '5(q6j/qPGxzW'
+            user: process.env.USER,
+            pass: process.env.PASS
         },
-        // tls: {
-        //     rejectUnauthorized: false
-        // }
+        tls: {
+            rejectUnauthorized: false
+        }
     })
     
     const mailOptions = {
         from: req.body.email,
-        to: 'c.millerscott@gmail.com',
+        to: process.env.USER,
         subject: `Message from: ${req.body.email}`,
         text: req.body.message
     }
