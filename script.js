@@ -67,3 +67,9 @@ function hideLabel(labelId) {
   label.style.transform = "translateX(1rem) translateY(2rem)";
 }
 
+// refresh page on viewport resize
+window.onresize = function(event)
+{
+document.location.reload(true);
+}
+

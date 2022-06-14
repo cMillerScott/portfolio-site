@@ -537,7 +537,7 @@ footer {
       transform: translateY(-1vh);
     }
     50% {
-      transform: translateY(125vh);
+      transform: translateY(89vh);
     }
     100% {
       transform: translateY(-1vh);
@@ -546,13 +546,13 @@ footer {
 
   @keyframes float2 {
     0% {
-      transform: translatey(125vh);
+      transform: translatey(89vh);
     }
     50% {
       transform: translatey(-1vh);
     }
     100% {
-      transform: translatey(125vh);
+      transform: translatey(89vh);
     }
   }
 
